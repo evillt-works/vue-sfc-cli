@@ -17,6 +17,12 @@ module.exports = {
   },
   groupBy: {
     '✨ New Features:': ['enhancement'],
-    '🐛 Bug Fixes:': ['bug']
+    '🐛 Bug Fixes:': ['bug'],
+    '📖 Documentation:': ['documentation'],
+    '💅 Refactors:': ['refactor'],
+    '♻️ Tests:': ['test'],
+    '🏡 Chore:': ['chore'],
+    '🚀 Performance:': ['performance'],
+    '⚓ Dependency upgrades:': ['dependencies']
   }
 }
