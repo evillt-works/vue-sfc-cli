@@ -23,8 +23,8 @@ module.exports = {
     '📖 Documentation:': ['documentation'],
     '💅 Refactors:': ['refactor'],
     '♻️ Tests:': ['test'],
-    '🏡 Chore:': ['chore'],
     '🚀 Performance:': ['performance'],
-    '⚓ Dependency upgrades:': ['dependencies']
+    '⚓ Dependency upgrades:': ['dependencies'],
+    '🏡 Chore:': ['chore']
   }
 }
