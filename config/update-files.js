@@ -4,5 +4,6 @@ module.exports = [
   '.stylelintrc',
   '.travis.yml',
   'build.sh',
+  'netlify.sh',
   'notify.sh'
 ]
