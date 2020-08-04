@@ -1,4 +1,5 @@
 const logger = require('./logger')
+const rs = require('./replace-string')
 
 exports.logger = logger
 
@@ -7,13 +8,14 @@ exports.pascalify = pascalify
 exports.kebabcasify = kebabcasify
 
 exports.parseContent = (content, { componentName, ownerName }) => {
-  return content
-    .replace(createRegExp('componentNamePascal'), pascalify(componentName))
-    .replace(createRegExp('componentName'), kebabcasify(componentName))
-    .replace(createRegExp('ownerName'), ownerName)
-    .replace(createRegExp('ownerNameLowerCase'), ownerName.toLowerCase())
-    .replace(createRegExp('cliVersion'), require('../package.json').version)
-    .replace(createRegExp('licenseYear'), new Date().getFullYear())
+  return rs(content, {
+    componentNamePascal: pascalify(componentName),
+    componentName: kebabcasify(componentName),
+    ownerName,
+    ownerNameLowerCase: ownerName.toLowerCase(),
+    cliVersion: require('../package.json').version,
+    licenseYear: new Date().getFullYear()
+  })
 }
 
 function kebabcasify(content) {
@@ -26,8 +28,4 @@ function kebabcasify(content) {
 function pascalify(content) {
   const camelized = content.replace(/-([a-z])/g, c => c[1].toUpperCase())
   return camelized.charAt(0).toUpperCase() + camelized.slice(1)
-}
-
-function createRegExp(str) {
-  return new RegExp(`{{\\s?${str}\\s?}}`, 'g')
 }
