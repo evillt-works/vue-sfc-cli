@@ -73,9 +73,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "vue-sfc-cli": {
-    "createVersion": "{{cliVersion}}"
-  },
+  "vue-sfc-cli": "{{cliVersion}}",
   "engines": {
     "node": ">= 8.3.0",
     "npm": ">= 3.0.0"
