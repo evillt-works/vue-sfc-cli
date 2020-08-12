@@ -112,7 +112,7 @@ npx vue-sfc-cli -u
 If you want to update additional files, you can pass this option, multiple files use `,` to separate
 
 ```
-npx vue-sfc-cli -u --files package.json,.babelrc.js
+npx vue-sfc-cli -u --files .babelrc.js,.eslintrc.js
 ```
 
 `-—test`
