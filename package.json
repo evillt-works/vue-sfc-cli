@@ -30,6 +30,7 @@
     "fs-extra": "^7.0.1",
     "glob": "^7.1.3",
     "kleur": "^3.0.3",
+    "lodash.set": "^4.3.2",
     "mri": "^1.1.4",
     "readline-sync": "^1.4.9"
   },
