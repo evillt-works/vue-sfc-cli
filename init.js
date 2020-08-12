@@ -6,7 +6,7 @@ const parseArgs = require('./lib/parseArgs')
 const kleur = require('kleur')
 const path = require('path')
 const readline = require('readline-sync')
-const fs = require('fs-extra')
+const { setShellFilePermission } = require('./utils/update-files')
 
 const argv = parseArgs(process.argv.slice(2))
 
@@ -80,9 +80,7 @@ if (!isUpgrade()) {
     }
   })
 
-  fs.chmodSync(path.join(outDir, 'build.sh'), '755')
-  fs.chmodSync(path.join(outDir, 'notify.sh'), '755')
-  fs.chmodSync(path.join(outDir, 'netlify.sh'), '755')
+  setShellFilePermission(outDir)
 
   logger.success(`Generated into ${kleur.underline(outDir)}`)
 }
