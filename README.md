@@ -102,12 +102,14 @@ yarn publish
 
 According to the template files in the templates directory, new files will be generated and override the files with same name in current component directory. The default override files is defined in update-files.js. This option often used to upgrade the configuration of old components using the latest version of vue-sfc-cli：
 
+**This option can also help any node.js project to set up configuration of AUTO npm publishment via travis ci**
+
 ```
 # cd my-component
 npx vue-sfc-cli -u
 ```
 
-`—-files`
+`--files`
 
 If you want to update additional files, you can pass this option, multiple files use `,` to separate
 
@@ -115,7 +117,7 @@ If you want to update additional files, you can pass this option, multiple files
 npx vue-sfc-cli -u --files .babelrc.js,.eslintrc.js
 ```
 
-`-—test`
+`--test`
 
 Generate a component template for testing, commonly used in CI .
 

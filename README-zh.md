@@ -85,14 +85,16 @@ yarn publish
 
 `-u`, `--upgrade`
 
-根据 template目录下模板，生成新的文件，更新到当前组件中。使用的是覆盖策略，默认覆盖的文件定义在 update-files.js。常用于使用最新版本vue-sfc-cli对旧组件的配置进行升级
+根据 template 目录下模板，生成新的文件，更新到当前组件中。使用的是覆盖策略，默认覆盖的文件定义在 update-files.js。常用于使用最新版本 vue-sfc-cli 对旧组件的配置进行升级。
+
+**此参数还可以让任意 node.js 项目通过 travis ci 自动发布到 NPM**
 
 ```
 # cd my-component
 npx vue-sfc-cli -u
 ```
 
-`—-files`
+`--files`
 
 如果想更新额外的文件，可以传此选项，后接文件名，多个文件使用 `,` 分隔
 
@@ -100,7 +102,7 @@ npx vue-sfc-cli -u
 npx vue-sfc-cli -u --files .babelrc.js,.eslintrc.js
 ```
 
-`-—test` 
+`--test` 
 
 生成一个测试的组件模板，常用于ci环境测试。
 
