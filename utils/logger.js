@@ -34,6 +34,10 @@ class Logger {
     this.log(kleur.cyan('info'), ...args)
   }
 
+  todo(...args) {
+    this.log(kleur.magenta('🔍TODO'), ...args)
+  }
+
   fileAction(color, type, fp) {
     this.info(
       kleur[color](type), kleur.green(path.relative(process.cwd(), fp))
